@@ -1,0 +1,151 @@
+<!DOCTYPE HTML>
+<html>
+
+    <head>
+        <title>Moj A1 - login</title>
+        <meta http-equiv="Content-Type" content="html; charset=UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+        <link rel="stylesheet" type="text/css" href="a1bf.css">
+        <link rel="stylesheet" type="text/css" href="font-face.css">
+
+    </head>
+
+<body >
+    <style>
+        body {
+            background-image: url("bf.jfif");
+            background-repeat: no-repeat;
+            background-position: center;
+            }
+        </style>
+        <div class="login-page">
+            
+            <div class="header-bar">
+                <div class="container">
+                    <div class="header-bar__content">
+                        <a href="https://www.a1.rs/privatni"><img src="https://asmp.a1.rs/_aaa_resources_/html2021/img/a1-logo.png" class="a1-logo"/></a>
+                        <!-- <a href="#">Nazad</a>  -->
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="container">
+                    <div class="content">
+                        <h1>Moj A1</h1>
+                        <p class="primary-bold"></p><br>
+                        
+                        <div class="tabs-bg">
+                            <ul class="tabs">
+                                <li class="tab-item  active " data-tab="tab-email">Prijavi se putem e-maijla</li>
+                            </ul>
+                        </div>                           
+                        <div class="tabs-content">
+                            <div id="tab-email" class="tab-content  active ">
+
+                                <form id="prijavi-se-email-form" class="asmp-form" method="post"
+                                  name="asmpform1" action="https://asmp.a1.rs/asmp/ProcessLoginServlet/lvpaaa2/?aaacookie=lvpaaa2&amp;eacookie=" enctype="application/x-www-form-urlencoded">
+
+				                <input type="hidden" name="userRequestURL"
+	                                value="https%3A%2F%2Fa1.rs%2Fwpayment">
+                                <input type="hidden" name="service"
+                                    value="WebPayment_login">
+                                <input type="hidden" name="serviceRegistrationURL"
+                                    value="">
+                                <input type="hidden" name="level"
+                                    value="10">
+                                <input type="hidden" name="wrongLoginType" value="false" />
+                                <input type="hidden" name="SetMsisdn" value="false" />
+
+
+                                    <label class="custom-input   ">
+                                        <div class="value-box">
+                                        
+                                            <input type="text" id="email" name="email" />
+                                        
+                                            <span class="placeholder">Unesi e-mail adresu</span>
+                                        </div>
+                                        <div class="error-msg">
+                                            <span></span>
+                                        </div>
+                                    </label>
+                                    <label class="custom-input   ">
+                                        <div class="value-box">
+                                            <input type="password" id="pass" name="pass" />
+                                            <span class="placeholder">Unesi lozinku</span>
+                                        </div>
+                                        <div class="error-msg">
+                                            <span></span>
+                                        </div>
+                                    </label>
+                                    <a href="https://www.a1.rs/privatni/sso/zaboravljena_loznika" class="forgot-pass primary-bold">Zaboravljena lozinka?</a>
+                                    <div class="submit-section">
+                                        <button class="a1-btn" type="submit" name="submit" value="prijavi-se-email" id="submit-prijavi-se-email"><span class="label">Prijavi se</span><span class="icon"><img src="https://asmp.a1.rs/_aaa_resources_/html2021/img/icon-chevron-right-white.svg" /></span></button>
+                                        <p>Nemaš A1 nalog? <a href="https://www.a1.rs/privatni/sso/registracija" class="primary-bold">Registruj se</a></p>
+                                    </div>
+                                </form>
+                            </div>
+           
+                            <div id="tab-phone" class="tab-content ">
+                                <form id="prijavi-se-phone-form" class="asmp-form" method="post"
+								  name="asmpform2" action="https://asmp.a1.rs/asmp/ProcessLoginServlet/lvpaaa2/?aaacookie=lvpaaa2&amp;eacookie=" enctype="application/x-www-form-urlencoded">
+								  
+				<input type="hidden" name="userRequestURL"
+	                value="https%3A%2F%2Fa1.rs%2Fwpayment">
+				<input type="hidden" name="service"
+	                value="WebPayment_login">
+				<input type="hidden" name="serviceRegistrationURL"
+	                value="">
+				<input type="hidden" name="level"
+	                value="10">
+				<input type="hidden" name="wrongLoginType" value="false" />
+				<input type="hidden" name="SetMsisdn" value="false" />
+				<input type="hidden" name="pinCheck" value="combined">  
+				<input type="hidden" name="loginMsisdnSecured" value="">  
+                                   
+<!--                                     <label class="custom-input with-btn  ">
+                                        <div class="value-box">
+                                        
+                                            <input type="text" id="phone-no" name="phone-no" />
+                                        
+                                            <span class="placeholder">Unesi broj telefona</span>
+                                            <button class="a1-btn" type="submit" name="submit" id="posalji-pin" value="posalji-pin"><span class="label">Pošalji PIN</span></button>
+                                        </div>
+                                        <div class="error-msg">
+                                            <span>null</span>
+                                        </div>
+                                    </label> -->
+
+                                    <a href="https://www.a1.rs/privatni/sso/zaboravljena_loznika" class="forgot-pass primary-bold">Zaboravljena lozinka?</a>
+                                    <div class="submit-section">
+                                        <button class="a1-btn" type="submit" name="submit" value="prijavi-se-phone" id="submit-prijavi-se-phone"><span class="label">Prijavi se</span><span class="icon"><img src="https://asmp.a1.rs/_aaa_resources_/html2021/img/icon-chevron-right-white.svg" /></span></button>
+                                        <p>Nemaš A1 nalog? <a href="https://www.a1.rs/privatni/sso/registracija" class="primary-bold">Registruj se</a></p>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+           
+                    </div>
+                </div>
+            </div>
+                       
+            <div class="popup-bottom-msg "> 
+                <div class="container">
+                    <div class="popup-bottom-msg__content">
+                        <div class="left-side">
+                            <img src="https://asmp.a1.rs/_aaa_resources_/html2021/img/check-sign-checked.svg" width="16" height="12" />
+                            <span>PIN je uspešno poslat na tvoj broj</span>
+                        </div>
+                        <div class="right-side">
+                            <img src="https://asmp.a1.rs/_aaa_resources_/html2021/img/icon-x.svg" class="close-icon" width="13" height="13" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://asmp.a1.rs/_aaa_resources_/html2021/asmp.js"></script>
+
+</body>
+
+</html>
