@@ -1,53 +1,53 @@
 @font-face {
   font-family: "A1Sans-Bold";
-  src: local("A1Sans-Bold"), url("../fonts/A1Sans-Bold.woff2") format("woff2"), url("../fonts/A1Sans-Bold.woff") format("woff"); }
+  src: local("A1Sans-Bold"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Sans-Bold.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Sans-Bold.woff") format("woff"); }
 .primary-bold {
   font-family: A1Sans-Bold; }
 
 @font-face {
   font-family: "A1Sans-Light";
-  src: local("A1Sans-Light"), url("../fonts/A1Sans-Light.woff2") format("woff2"), url("../fonts/A1Sans-Light.woff") format("woff"); }
+  src: local("A1Sans-Light"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Sans-Light.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Sans-Light.woff") format("woff"); }
 .primary-light {
   font-family: A1Sans-Light; }
 
 @font-face {
   font-family: "A1Sans-Regular";
-  src: local("A1Sans-Regular"), url("../fonts/A1Sans-Regular.woff2") format("woff2"), url("../fonts/A1Sans-Regular.woff") format("woff"); }
+  src: local("A1Sans-Regular"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Sans-Regular.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Sans-Regular.woff") format("woff"); }
 .primary {
   font-family: A1Sans-Regular; }
 
 @font-face {
   font-family: "A1Serif-Bold";
-  src: local("A1Serif-Bold"), url("../fonts/A1Serif-Bold.woff2") format("woff2"), url("../fonts/A1Serif-Bold.woff") format("woff"); }
+  src: local("A1Serif-Bold"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Serif-Bold.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Serif-Bold.woff") format("woff"); }
 .secondary-bold {
   font-family: A1Serif-Bold; }
 
 @font-face {
   font-family: "A1Serif-Light";
-  src: local("A1Serif-Light"), url("../fonts/A1Serif-Light.woff2") format("woff2"), url("../fonts/A1Serif-Light.woff") format("woff"); }
+  src: local("A1Serif-Light"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Serif-Light.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Serif-Light.woff") format("woff"); }
 .secondary-light {
   font-family: A1Serif-Light; }
 
 @font-face {
   font-family: "A1Serif-Regular";
-  src: local("A1Serif-Regular"), url("../fonts/A1Serif-Regular.woff2") format("woff2"), url("../fonts/A1Serif-Regular.woff") format("woff"); }
+  src: local("A1Serif-Regular"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Serif-Regular.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Serif-Regular.woff") format("woff"); }
 .secondary {
   font-family: A1Serif-Regular; }
 
 @font-face {
   font-family: "A1SansCondensed-Bold";
-  src: local("A1SansCondensed-Bold"), url("../fonts/A1SansCondensed-Bold.woff2") format("woff2"), url("../fonts/A1SansCondensed-Bold.woff") format("woff"); }
+  src: local("A1SansCondensed-Bold"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1SansCondensed-Bold.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1SansCondensed-Bold.woff") format("woff"); }
 .tertiary-bold {
   font-family: A1SansCondensed-Bold; }
 
 @font-face {
   font-family: "A1SansCondensed-Light";
-  src: local("A1SansCondensed-Light"), url("../fonts/A1SansCondensed-Light.woff2") format("woff2"), url("../fonts/A1SansCondensed-Light.woff") format("woff"); }
+  src: local("A1SansCondensed-Light"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1SansCondensed-Light.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1SansCondensed-Light.woff") format("woff"); }
 .tertiary-light {
   font-family: A1SansCondensed-Light; }
 
 @font-face {
   font-family: "A1SansCondensed-Regular";
-  src: local("A1SansCondensed-Regular"), url("../fonts/A1SansCondensed-Regular.woff2") format("woff2"), url("../fonts/A1SansCondensed-Regular.woff") format("woff"); }
+  src: local("A1SansCondensed-Regular"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1SansCondensed-Regular.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1SansCondensed-Regular.woff") format("woff"); }
 .tertiary {
   font-family: A1SansCondensed-Regular; }
